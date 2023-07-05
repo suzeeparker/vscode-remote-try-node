@@ -8,13 +8,14 @@
 const express = require('express');
 
 // Constants
-const PORT = 3000;
+const PORT = 3001;
 const HOST = '0.0.0.0';
 
 // App
 const app = express();
 app.get('/', (req, res) => {
-	res.send('Hello remote world!\n');
+//	res.send('Hello remote world!\n<br>Why is it considered remote?<br> Good question. --');
+    res.sendFile(`${__dirname}/hello.html`)
 });
 
 app.listen(PORT, HOST);
